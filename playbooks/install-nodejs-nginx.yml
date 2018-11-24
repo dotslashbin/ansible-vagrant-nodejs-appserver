@@ -17,6 +17,6 @@
   tasks:
     - name: Install nodejs and essentials
       apt:
-        name: ['build-essential', 'nodejs']
+        name: ['build-essential', 'nodejs', 'npm']
         state: present
         update_cache: yes
