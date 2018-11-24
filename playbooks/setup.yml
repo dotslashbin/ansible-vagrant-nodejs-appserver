@@ -1,0 +1,21 @@
+---
+- hosts: appserver
+  become: true
+  become_method: sudo
+  tasks:
+    - name: APPSERVER -> update ubuntu packages
+      apt:
+          name: "*"
+          state: latest
+          force_apt_get: yes
+    - name: APPSERVER -> install nodejs
+
+- hosts: webserver
+  become: true
+  become_method: sudo
+  tasks:
+    - name: WEBSERVER -> update ubuntu packages
+      apt:
+          name: "*"
+          state: latest
+          force_apt_get: yes

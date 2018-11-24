@@ -1,0 +1,5 @@
+[nodeappserver]
+appserver ansible_host=127.0.0.1 ansible_port=2222
+
+[nodewebserver]
+webserver ansible_host=127.0.0.1 ansible_port=2200
